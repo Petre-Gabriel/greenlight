@@ -1,0 +1,23 @@
+{
+  "name": "greenlight",
+  "version": "0.0.1",
+  "source": "lib/main.js",
+  "global": "dist/main.js",
+  "targets": {
+    "global": {
+      "context": "browser",
+      "outputFormat": "global"
+    }
+  },
+  "author": "Petre Gabriel-Bogdan",
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  },
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "observable-membrane": "^2.0.0"
+  }
+}
