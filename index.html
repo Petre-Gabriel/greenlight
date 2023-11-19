@@ -14,8 +14,14 @@
       <div gl-controller="LoginForm">
         <form>
           <input type="text" placeholder="Username" gl-bind="username" />
-          <input type="text" placeholder="Password" gl-bind="password" />
+          <input type="password" placeholder="Password" gl-bind="password" />
         </form>
+
+        <hr />
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+
+        <div gl-if="username">Username is set</div>
       </div>
     </div>
 
@@ -26,9 +32,7 @@
       GreenLight.init(root);
       const LoginForm = GreenLight.controller("LoginForm");
 
-      LoginForm.on("storeUpdated", (updated) => {
-        console.log(updated);
-      });
+      LoginForm.$store.get().username = "abc";
     </script>
   </body>
 </html>
