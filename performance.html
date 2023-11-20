@@ -1,0 +1,4041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+
+    <style>
+      .error {
+        padding: 8px 12px;
+        border: 1px solid red;
+        border-radius: 3px;
+
+        background-color: rgba(255, 0, 0, 0.04);
+        color: red;
+        font-weight: 500;
+
+        max-width: 65ch;
+
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div>Div 1</div>
+      <div>Div 2</div>
+      <div>Div 3</div>
+
+      <div gl-controller="1">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="2">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="3">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="4">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="5">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="6">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="7">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="8">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="9">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="10">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="11">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="12">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="13">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="14">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="15">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="16">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="17">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="18">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="19">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="20">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="21">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="22">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="23">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="24">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="25">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="26">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="27">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="28">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="29">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="30">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="31">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="32">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="33">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="34">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="35">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="36">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="37">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="38">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="39">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="40">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="41">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="42">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="43">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="44">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="45">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="46">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="47">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="48">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="49">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="50">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="51">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="52">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="53">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="54">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="55">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="56">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="57">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="58">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="59">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="60">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="61">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="62">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="63">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="64">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="65">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="66">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="67">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="68">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="69">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="70">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="71">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="72">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="73">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="74">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="75">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="76">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="77">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="78">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="79">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="80">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="81">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="82">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="83">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="84">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="85">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="86">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="87">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="88">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="89">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="90">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="91">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="92">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="93">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="94">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="95">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="96">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="97">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="98">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="99">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="100">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="101">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="102">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="103">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="104">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="105">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="106">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="107">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="108">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="109">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="110">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="111">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="112">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="113">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="114">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="115">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="116">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="117">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="118">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="119">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="120">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="121">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="122">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="123">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="124">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="125">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="126">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="127">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="128">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="129">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="130">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="131">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="132">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="133">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="134">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="135">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="136">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="137">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="138">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="139">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="140">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="141">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="142">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="143">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="144">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="145">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="146">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="147">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="148">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="149">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="150">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="151">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="152">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="153">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="154">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="155">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="156">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="157">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="158">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="159">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="160">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="161">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="162">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="163">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="164">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="165">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="166">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="167">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="168">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="169">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="170">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="171">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="172">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="173">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="174">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="175">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="176">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="177">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="178">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="179">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="180">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="181">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="182">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="183">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="184">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="185">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="186">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="187">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="188">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="189">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="190">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="191">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="192">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="193">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="194">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="195">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="196">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="197">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="198">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="199">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+
+      <div gl-controller="200">
+        <form>
+          <input type="text" placeholder="Username" gl-bind="username" />
+          <input type="password" placeholder="Password" gl-bind="password" />
+        </form>
+
+        <button gl-on="click:clearUsername">Clear username</button>
+
+        <hr />
+
+        <div
+          x-if="username"
+          gl-hook="username:onUsernameChange"
+          class="error"
+        ></div>
+
+        <div>Username: <span gl-bind="username"></span></div>
+        <div>Password: <span gl-bind="password"></span></div>
+      </div>
+    </div>
+
+    <script src="./dist/main.js"></script>
+    <script>
+      const root = document.querySelector(".root");
+
+      const start = performance.now();
+      GreenLight.init(root);
+      const finish = performance.now();
+      console.log(finish - start);
+    </script>
+  </body>
+</html>
