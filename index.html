@@ -28,23 +28,25 @@
       <div>Div 3</div>
 
       <div gl-controller="LoginForm">
-        <form>
           <input type="text" placeholder="Username" gl-bind="username" />
           <input type="password" placeholder="Password" gl-bind="password" />
         </form>
 
-        <button gl-on="click:clearUsername">Clear username</button>
-
         <hr />
 
         <div
-          x-if="username"
-          gl-hook="username:onUsernameChange"
+          gl-hook="username,password:onUsernameChange"
           class="error"
         ></div>
 
         <div>Username: <span gl-bind="username"></span></div>
         <div>Password: <span gl-bind="password"></span></div>
+
+        <ul>
+          <template gl-for="name in names">
+            <li gl-bind="name">test</li>
+          </template>
+        </ul>
       </div>
     </div>
 
@@ -52,25 +54,28 @@
     <script>
       const root = document.querySelector(".root");
 
-      const start = performance.now();
       GreenLight.init(root);
-      const finish = performance.now();
-      console.log(finish - start);
 
       const LoginForm = GreenLight.controller("LoginForm");
+      LoginForm.$store.get().username = '';
+      LoginForm.$store.get().password = '';
 
-      LoginForm.on("onUsernameChange", (username) => {
-        if (username.length < 5)
+      LoginForm.$store.get().names = ['Petre', 'Gabriel', 'Bogdan'];
+      
+      LoginForm.on("onUsernameChange", ([username, password]) => {
+        if(!username && !password) return;
+        
+        if (username?.length < 5)
           return "The username should have at least 5 characters";
-
+      
         if (username === "Gabriel03") return "Username is taken.";
+      
+        if(password?.length < 8)
+          return 'Your password should have at least 8 characters';
 
         return;
       });
-
-      LoginForm.on("clearUsername", (event) => {
-        LoginForm.$store.get().username = "";
-      });
+    
     </script>
   </body>
 </html>
