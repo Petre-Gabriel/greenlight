@@ -28,16 +28,14 @@
       <div>Div 3</div>
 
       <div gl-controller="LoginForm">
+        <form>
           <input type="text" placeholder="Username" gl-bind="username" />
           <input type="password" placeholder="Password" gl-bind="password" />
         </form>
 
         <hr />
 
-        <div
-          gl-hook="username,password:onUsernameChange"
-          class="error"
-        ></div>
+        <div gl-hook="username,password:onUsernameChange" class="error"></div>
 
         <div>Username: <span gl-bind="username"></span></div>
         <div>Password: <span gl-bind="password"></span></div>
@@ -57,25 +55,24 @@
       GreenLight.init(root);
 
       const LoginForm = GreenLight.controller("LoginForm");
-      LoginForm.$store.get().username = '';
-      LoginForm.$store.get().password = '';
+      LoginForm.$store.get().username = "";
+      LoginForm.$store.get().password = "";
 
-      LoginForm.$store.get().names = ['Petre', 'Gabriel', 'Bogdan'];
-      
+      LoginForm.$store.get().names = ["Petre", "Gabriel", "Bogdan"];
+
       LoginForm.on("onUsernameChange", ([username, password]) => {
-        if(!username && !password) return;
-        
+        if (!username && !password) return;
+
         if (username?.length < 5)
           return "The username should have at least 5 characters";
-      
+
         if (username === "Gabriel03") return "Username is taken.";
-      
-        if(password?.length < 8)
-          return 'Your password should have at least 8 characters';
+
+        if (password?.length < 8)
+          return "Your password should have at least 8 characters";
 
         return;
       });
-    
     </script>
   </body>
 </html>
