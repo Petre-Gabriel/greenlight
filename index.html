@@ -41,8 +41,12 @@
         <div>Password: <span gl-bind="password"></span></div>
 
         <ul>
-          <template gl-for="name in names">
-            <li gl-bind="name">test</li>
+          <template gl-for="(name,idx) in names">
+            <li>
+              <span gl-bind="name"></span>
+              -
+              <span gl-bind="idx"></span>
+            </li>
           </template>
         </ul>
       </div>
@@ -55,10 +59,16 @@
       GreenLight.init(root);
 
       const LoginForm = GreenLight.controller("LoginForm");
-      LoginForm.$store.get().username = "";
-      LoginForm.$store.get().password = "";
 
-      LoginForm.$store.get().names = ["Petre", "Gabriel", "Bogdan"];
+      LoginForm.$store.get().names = [1, 2, 3];
+
+      const test = [];
+
+      for (let i = 1; i <= 500; i++) {
+        test.push(i);
+      }
+
+      LoginForm.$store.get().names = test;
 
       LoginForm.on("onUsernameChange", ([username, password]) => {
         if (!username && !password) return;
