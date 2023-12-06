@@ -37,16 +37,14 @@
 
         <div gl-hook="username,password:onUsernameChange" class="error"></div>
 
+        <div gl-template="{username} {user} {dinamo} is already taken."></div>
+
         <div>Username: <span gl-bind="username"></span></div>
         <div>Password: <span gl-bind="password"></span></div>
 
         <ul>
           <template gl-for="(name,idx) in names">
-            <li>
-              <span gl-bind="name"></span>
-              -
-              <span gl-bind="idx"></span>
-            </li>
+            <li gl-template="{name} is in the {idx} place"></li>
           </template>
         </ul>
       </div>
