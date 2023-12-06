@@ -124,7 +124,7 @@ The code above is the same as running the following JavaScript
 if(!isOnline)
 ```
 
-So, you can pass a variable that is `null` but it will also take it as a false value. So, based on what you want to achieve it is good to keep in mind that it doesn't only check if it's true or false.
+So, you can pass a variable that is `null` but it will take it as a true value. So, based on what you want to achieve it is good to keep in mind that it doesn't treat it as a boolean only.
 
 # gl-hook
 

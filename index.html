@@ -1,3 +1,4 @@
+<!-- NOTE: EDIT WITH CAUTION, AS THIS FILE IS USED IN THE CYPRESS TESTS. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,15 +30,30 @@
 
       <div gl-controller="LoginForm">
         <form>
-          <input type="text" placeholder="Username" gl-bind="username" />
+          <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            gl-bind="username"
+          />
           <input type="password" placeholder="Password" gl-bind="password" />
         </form>
 
         <hr />
 
-        <div gl-hook="username,password:onUsernameChange" class="error"></div>
+        <div
+          id="usernameHook"
+          gl-hook="username,password:onUsernameChange"
+          class="error"
+        ></div>
 
-        <div gl-template="{username} {user} {dinamo} is already taken."></div>
+        <div
+          gl-if="username"
+          id="usernameTemplate"
+          gl-template="{username} is already taken."
+        ></div>
+
+        <button id="onTest" gl-on="click:testEvent">Test</button>
 
         <div>Username: <span gl-bind="username"></span></div>
         <div>Password: <span gl-bind="password"></span></div>
@@ -60,13 +76,11 @@
 
       LoginForm.$store.get().names = [1, 2, 3];
 
-      const test = [];
+      // for (let i = 1; i <= 500; i++) {
+      //   test.push(i);
+      // }
 
-      for (let i = 1; i <= 500; i++) {
-        test.push(i);
-      }
-
-      LoginForm.$store.get().names = test;
+      // LoginForm.$store.get().names = test;
 
       LoginForm.on("onUsernameChange", ([username, password]) => {
         if (!username && !password) return;
