@@ -1,9 +1,0 @@
-language: node_js
-install:
-  - npm install
-  - npm run cypress:verify
-script:
-  - npm run build
-  - npm run dev:test &
-  - npm run cypress:run -- --record
-  - kill $(jobs -p) || true

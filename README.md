@@ -1,4 +1,6 @@
-﻿# GreenLight.js
+﻿[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/D4bACYgELziWRdvGQX58ng/JLCBwpaAdTngwcyk3kHWug/tree/main.svg?style=svg&circle-token=0e0c994164d8667fcc9bb65e1305a3f58bd741a0)](https://dl.circleci.com/status-badge/redirect/circleci/D4bACYgELziWRdvGQX58ng/JLCBwpaAdTngwcyk3kHWug/tree/main)
+
+# GreenLight.js
 
 A minimal JavaScript framework for boosting production on small-scale web projects.
 
