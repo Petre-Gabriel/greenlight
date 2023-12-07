@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: Start Live Server
-          command: npm dev:test & sleep 5
+          command: npm run dev:test & sleep 5
 
       - run:
           name: Run Cypress Tests
