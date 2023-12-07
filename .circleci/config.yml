@@ -10,13 +10,7 @@ jobs:
       
       - run:
           name: Install Dependencies
-          command: npm install
-          persists_tool_cache:
-            root: ~/.cache/Cypress
-
-      - run:
-          name: Install Cypress Dependencies
-          command: apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+          command: npm ci
 
       - run:
           name: Build
