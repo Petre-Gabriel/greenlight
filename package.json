@@ -13,12 +13,16 @@
   "author": "Petre Gabriel-Bogdan",
   "devDependencies": {
     "cypress": "^13.6.1",
+    "live-server": "^1.2.2",
     "parcel": "^2.10.2"
   },
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
-    "cypress:open": "cypress open"
+    "dev:test": "node testing.server.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:verify": "cypress verify"
   },
   "dependencies": {
     "@parcel/compressor-gzip": "^2.10.3",
