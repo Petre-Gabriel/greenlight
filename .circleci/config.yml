@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:21.4.0
+      - image: cimg/node:18.18.2
 
     steps:
       - checkout
@@ -30,16 +30,16 @@ jobs:
           command: npm run build
 
       - run:
+          name: Start Live Server
+          command: npm run dev:test & sleep 5
+
+      - run:
           name: Cypress xvfb
           command: Xvfb :1 -screen 0 1280x800x24 &
 
       - run:
           name: Cypress display set
           command: export DISPLAY=:1
-
-      - run:
-          name: Start Live Server
-          command: npm run dev:test & sleep 5
 
       - run:
           name: Run Cypress Tests
