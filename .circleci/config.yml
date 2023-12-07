@@ -25,8 +25,7 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
-            - ~/.cache/Cypress
+            - ~/.cache
           key: v1-dependencies-{{ checksum "package-lock.json" }}
           
       - run:
