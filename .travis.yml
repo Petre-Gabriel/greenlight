@@ -1,11 +1,13 @@
 language: javascript
+os: linux
+dist: dist
 cache:
   directories:
     - ~/.npm
     - ~/.cache
-  override:
-    - npm ci
-    - npm run cypress:verify
+install:
+  - npm ci
+  - npm run cypress:verify
 script:
   - npm run dev:test &
   - npm run cypress:run -- --record
