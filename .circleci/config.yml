@@ -20,10 +20,6 @@ jobs:
           command: npm ci
 
       - run:
-          name: Install Cypress
-          command: npm install cypress@12.13.0
-
-      - run:
           name: Install Xvfb
           command: sudo apt-get install -y xvfb
           
