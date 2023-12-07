@@ -30,12 +30,20 @@ jobs:
           command: npm run build
 
       - run:
+          name: Cypress xvfb
+          command: Xvfb :1 -screen 0 1280x800x24 &
+
+      - run:
+          name: Cypress display set
+          command: export DISPLAY=:1
+
+      - run:
           name: Start Live Server
           command: npm run dev:test & sleep 5
 
       - run:
           name: Run Cypress Tests
-          command: xvfb-run npm run cypress:run
+          command: npm run cypress:run
 
 workflows:
   version: 2
