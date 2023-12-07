@@ -23,6 +23,10 @@ jobs:
           name: Install Cypress
           command: npm install cypress@13.6.1
 
+      - run:
+          name: Install Cypress binaries
+          command: npx cypress install
+
       - save_cache:
           paths:
             - node_modules
