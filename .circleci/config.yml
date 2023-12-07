@@ -24,8 +24,12 @@ jobs:
           command: npm install cypress@13.6.1
 
       - run:
-          name: Install xvfb
-          command: sudo apt-get install xvfb
+          name: update xvfb
+          command: Xvfb :1 -screen 0 1280x800x24 &
+
+      - run:
+          name: update display xvfb
+          command: export DISPLAY=:1
 
       - save_cache:
           paths:
