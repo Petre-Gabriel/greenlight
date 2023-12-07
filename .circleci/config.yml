@@ -24,8 +24,8 @@ jobs:
           command: npm install cypress@13.6.1
 
       - run:
-          name: Install Cypress binaries ( forced )
-          command: npx cypress install --force
+          name: Install xvfb
+          command: sudo apt-get install xvfb
 
       - save_cache:
           paths:
