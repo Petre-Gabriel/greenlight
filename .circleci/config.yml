@@ -43,7 +43,7 @@ jobs:
 
       - run:
           name: Run Cypress Tests
-          command: npm run cypress:run
+          command: xvfb-run npm run cypress:run
 
 workflows:
   version: 2
