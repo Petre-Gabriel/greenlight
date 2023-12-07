@@ -39,7 +39,12 @@ jobs:
 
       - run:
           name: Start Live Server
-          command: npm run dev:test & sleep 5
+          command: npm run dev:test
+          background: true
+
+      - run:
+          name: Sleep 5 seconds so the server can boot
+          command: sleep 5
 
       - run:
           name: Cypress xvfb
