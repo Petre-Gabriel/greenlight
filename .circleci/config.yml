@@ -18,6 +18,10 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm ci
+
+      - run:
+          name: Install Cypress
+          command: npm cypress@12.13.0
           
       - save_cache:
           paths:
