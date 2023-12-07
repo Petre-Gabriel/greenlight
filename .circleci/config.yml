@@ -1,0 +1,61 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:20.10.0-browsers
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - npm-v1-{{ checksum "package-lock.json" }}
+            - npm-v1-
+            - cypress-v1-{{ arch }}
+            - cypress-v1-
+
+      - run:
+          name: Install Dependencies
+          command: npm ci
+
+      - run:
+          name: Install Xvfb
+          command: sudo apt-get install -y xvfb
+          
+      - save_cache:
+          paths:
+            - node_modules
+            - ~/.cache/Cypress
+          key: npm-cypress-v1-{{ checksum "package-lock.json" }}-{{ arch }}
+
+      - run:
+          name: Build
+          command: npm run build
+
+      - run:
+          name: Start Live Server
+          command: npm run dev:test
+          background: true
+
+      - run:
+          name: Sleep 5 seconds so the server can boot
+          command: sleep 5
+
+      - run:
+          name: Cypress xvfb
+          command: Xvfb :1 -screen 0 1280x800x24 &
+
+      - run:
+          name: Cypress display set
+          command: export DISPLAY=:1
+
+      - run:
+          name: Run Cypress Tests
+          command: npm run cypress:run
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
