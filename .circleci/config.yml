@@ -7,27 +7,13 @@ jobs:
 
     steps:
       - checkout
-
-      # Restore npm cache to speed up builds
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-            - v1-dependencies-
-            
+      
       - run:
           name: Install Dependencies
           command: npm install
           persists_tool_cache:
             root: ~/.cache/Cypress
-          persists_workspace:
-            paths:
-              - ./path/to/required/files
 
-      - save_cache:
-          paths:
-            - ~/.cache
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
-          
       - run:
           name: Build
           command: npm run build
