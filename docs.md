@@ -191,6 +191,22 @@ GreenLight will replace the `{username}` with the actual value from the store. I
 
 As always, we take into consideration the security of your application. It doesn't just replace it with the variable name. It creates a Text node so you can't just put for example, a script tag that will run.
 
+# gl-ref
+
+This directive is used to create an internal reference to any element in your controller and access the DOM element.
+
+```html
+<div gl-ref="anything"></div>
+```
+
+So, we create a reference called `anything` and we will fetch it in the following JS code:
+
+```js
+Controller.$refs.get("anything").innerHTML = "Test";
+```
+
+After this, the `innerHTML` of the element will be set to `Test`. Keep in mind that the returned value of `$refs.get` return a plain DOM element with no added properties from GreenLight.
+
 # Controller Effect
 
 Each controller has an `effect` method to react to dependencies changes. Here is an example:

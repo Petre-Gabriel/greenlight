@@ -72,6 +72,7 @@
             <li gl-template="{name} is in the {idx} place"></li>
           </template>
         </ul>
+        <div id="ref" gl-ref="contentRef">dsa</div>
       </div>
     </div>
 
@@ -84,6 +85,8 @@
       const LoginForm = GreenLight.controller("LoginForm");
 
       LoginForm.$store.get().names = [1, 2, 3];
+
+      const divRef = LoginForm.$refs.get("contentRef");
 
       // for (let i = 1; i <= 500; i++) {
       //   test.push(i);
