@@ -36,8 +36,17 @@
             placeholder="Username"
             gl-bind="username"
           />
-          <input type="password" placeholder="Password" gl-bind="password" />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            gl-bind="password"
+          />
         </form>
+
+        <!-- With these inputs, we test the controller `effect` method.  -->
+        <input gl-bind="effect" placeholder="effect 1" id="effectTest" />
+        <input gl-bind="effect2" placeholder="effect 2" id="effectTest2" />
 
         <hr />
 
