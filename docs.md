@@ -190,3 +190,24 @@ GreenLight will replace the `{username}` with the actual value from the store. I
 ## Security
 
 As always, we take into consideration the security of your application. It doesn't just replace it with the variable name. It creates a Text node so you can't just put for example, a script tag that will run.
+
+# Controller Effect
+
+Each controller has an `effect` method to react to dependencies changes. Here is an example:
+
+```js
+const MyController = GreenLight.controller("SearchForm");
+
+MyController.effect(() => {
+  // This code will run when searchInput or searchFilter changes.
+}, ["searchInput", "searchFilter"]);
+```
+
+If multiple variables from the dependencies array change at the same time, the effect will run only once.
+
+```js
+MyController.$store.get().searchInput = "apples";
+MyController.$store.get().searchFilter = "color=red";
+```
+
+If you run the code above, the effect will be triggered once. That is because internally, GreenLight uses a strategy called `debounce` to wait for new changes. It waits for a few milliseconds before the final call so if there are multiple changes to the dependency array it will only call it once.
