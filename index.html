@@ -88,11 +88,13 @@
 
       const divRef = LoginForm.$refs.get("contentRef");
 
-      // for (let i = 1; i <= 500; i++) {
-      //   test.push(i);
-      // }
+      GreenLight.$globalStore.effect(() => {
+        console.log("called");
+      }, ["username", "password"]);
 
-      // LoginForm.$store.get().names = test;
+      LoginForm.effect(() => {
+        console.log("here");
+      }, ["username"]);
 
       LoginForm.on("onUsernameChange", ([username, password]) => {
         if (!username && !password) return;

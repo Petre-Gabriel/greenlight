@@ -227,3 +227,35 @@ MyController.$store.get().searchFilter = "color=red";
 ```
 
 If you run the code above, the effect will be triggered once. That is because internally, GreenLight uses a strategy called `debounce` to wait for new changes. It waits for a few milliseconds before the final call so if there are multiple changes to the dependency array it will only call it once.
+
+# Global store
+
+If you want to pass data between multiple controllers, you can use the GreenLight store that was created on the `init` phase. To access it, you can use the following:
+
+```js
+GreenLight.$globalStore.get();
+```
+
+## Detect changes
+
+Also, you can react to changes on the global store by using the `onChange` method provided:
+
+```js
+GreenLight.$globalStore.onChange((keyChanged) => {
+  // Here you put the code you want to execute on change.
+});
+```
+
+## Store effects
+
+This is similar to the `onChange` method but it only reacts to changes on variables passed in the dependencies array. Here is an example:
+
+```js
+GreenLight.$globalStore.effect(() => {
+  // This will run only if the isUserConnected variable changed.
+}, ["isUserConnected"]);
+```
+
+### How it works internally
+
+As of any `effect` in this library, it utilizes a `debounce` strategy to batch changes together and only call the effect once if multiple variables have changed at once.
