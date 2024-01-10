@@ -6,13 +6,11 @@ A minimal JavaScript framework for boosting production on small-scale web projec
 
 # What does it do?
 
-GreenLight offers a variety of directives to control how data is being used and how it reacts to changes. The core principal of this library is the reactivity on each and every element.
+GreenLight offers a varierty of directives to control and react to the changes with as little effort as possible. All you have to do is declare your structure in HTML and handle the events with JavaScript. Out-of-the-box support for stores, data binding, memoization and error-handling.
 
 ## Let us handle the data changes in your project
 
-Stop worrying about what changes and where. Focus on how to utilize the data changed in your advantage. One of the main features of GreenLight is the reactive binding between elements. You only need to declare how your application handles the data provided by the library.
-
-Leave aside the rendering optimizations and the repetitive and boring tasks and start writing your business logic for the application.
+Stop worrying about what changes and where. Focus on how to utilize the data changed in your advantage. One of the main features of GreenLight is the reactivity behind it on each component state change.
 
 ## Let's see an example
 
@@ -66,7 +64,7 @@ With this command, GreenLight will hook on to the element provided and will atta
       const appRoot = document.getElementById("app-root");
 
       GreenLight.init(appRoot);
-      GreenLight.$store.get().myText = "Getting started";
+      GreenLight.$store.set(myText, "Getting started");
     </script>
   </body>
 </html>

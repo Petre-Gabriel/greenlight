@@ -26,7 +26,7 @@ const TodoController = GreenLight.controller("TodoController");
 
 // With this you can retreieve the store.
 // What we did down here will trigger the gl-for to render the elements below.
-TodoController.$store.get().items = ["Do", "Anything"];
+TodoController.$store.set("items", ["Do", "Anything"]);
 ```
 
 # gl-bind
@@ -42,7 +42,7 @@ The functionality of this directive depends on the type of element it is attache
 It will not only update the value of the input, but also it will update the store value that you can retrieve with JavaScript.
 
 ```js
-Controller.$store.get().username; // This gets updated when the input does
+Controller.$store.get("username"); // This gets updated when the input does
 ```
 
 But, for example, you want to bind the value to a `p` element. Here is how you do it:
@@ -51,7 +51,7 @@ But, for example, you want to bind the value to a `p` element. Here is how you d
 <p gl-bind="username"></p>
 ```
 
-Now, everytime the username changes, it will update the `p` element.
+Now, every time the username changes, it will update the `p` element.
 **NOTE**: It doesn't not accept any HTML and will treat it as a plain text because it is not safe to pass plain markup to the DOM.
 
 ## Scope
@@ -60,7 +60,7 @@ By default, GreenLight tries to fetch the closest store to your element. It can 
 
 # gl-on
 
-`gl-on` helps you react to disptached DOM events.
+`gl-on` helps you react to dispatched DOM events.
 
 Here is an example on how to react to form submits.
 
@@ -76,8 +76,8 @@ Here is an example on how to react to form submits.
 MyController.on("onLogin", (e) => {
   e.preventDefault(); // So it doesn't refresh the page
 
-  const email = MyController.$store.get().email;
-  const password = MyController.$store.get().password;
+  const email = MyController.$store.get("email");
+  const password = MyController.$store.get("password");
 
   console.log(`Your email is ${email} and your password is ${password}.`);
 });
@@ -124,7 +124,7 @@ The code above is the same as running the following JavaScript
 if(!isOnline)
 ```
 
-So, you can pass a variable that is `null` but it will take it as a true value. So, based on what you want to achieve it is good to keep in mind that it doesn't treat it as a boolean only.
+So, you can pass a variable that is `null` but it will also take it as a false value. So, based on what you want to achieve it is good to keep in mind that it doesn't only check if it's true or false.
 
 # gl-hook
 
@@ -155,7 +155,7 @@ It's a good practice to return nothing after all the checks to ensure that the d
 
 ```js
 // We initialize a simple list.
-Controller.$store.get().todos = ["Do this", "Do that"];
+Controller.$store.set("todos", ["Do this", "Do that"]);
 ```
 
 In the HTML, we are going to iterate over the `todos` list and print the index and the content.
@@ -175,7 +175,7 @@ In the HTML, we are going to iterate over the `todos` list and print the index a
 
 `gl-for` is a key directive because it's widely used across all web applications. It needs to be fast and reliable.
 
-GreenLight implements a variant of the Alpine.JS `x-for` that only re-renders new elements from the Array. Also, every element has an assigned key that tracks wether is should change or not.
+GreenLight implements a variant of the Alpine.JS `x-for` that only re-renders new elements from the Array. Also, every element has an assigned key that tracks whether it should change or not.
 
 # gl-template
 
@@ -222,8 +222,8 @@ MyController.effect(() => {
 If multiple variables from the dependencies array change at the same time, the effect will run only once.
 
 ```js
-MyController.$store.get().searchInput = "apples";
-MyController.$store.get().searchFilter = "color=red";
+MyController.$store.set(searchInput, "apples");
+MyController.$store.set(searchFilter, "color=red";
 ```
 
 If you run the code above, the effect will be triggered once. That is because internally, GreenLight uses a strategy called `debounce` to wait for new changes. It waits for a few milliseconds before the final call so if there are multiple changes to the dependency array it will only call it once.
