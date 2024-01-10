@@ -6,7 +6,7 @@ describe("gl-hook tests", () => {
     cy.get("#username").type("Gabriel03");
 
     // It should only be visible if Gabriel03 is in the username
-    cy.get("#usernameHook").should("be.visible");
+    cy.get("#usernameHook").should("have.text", "Username is taken.");
   });
 
   it("Should display an error if username has less than 5 charactesr", () => {

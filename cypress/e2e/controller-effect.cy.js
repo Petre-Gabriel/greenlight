@@ -30,8 +30,8 @@ describe("controller effect method tests", () => {
         callCount++;
       }, ["effectTest", "effectTest2"]);
 
-      Controller.$store.get().effectTest = "a";
-      Controller.$store.get().effectTest2 = "b";
+      Controller.$store.set("effectTest", "a");
+      Controller.$store.get("effectTest2", "b");
 
       // We wait for it to take effect
       cy.wait(300).then(() => {

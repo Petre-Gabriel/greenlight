@@ -10,9 +10,9 @@ describe("global store tests", () => {
         callCount++;
       });
 
-      store.get().effect = "";
-      store.get().effect = "a";
-      store.get().effect = "b";
+      store.set("effect", "");
+      store.set("effect", "a");
+      store.set("effect", "b");
 
       // We wait for it to take effect
       cy.wait(300).then(() => {
@@ -32,7 +32,7 @@ describe("global store tests", () => {
         callCount++;
       }, ["effectTest", "effectTest2"]);
 
-      store.get().effectTest = "a";
+      store.set("effectTest", "a");
 
       // We wait for it to take effect
       cy.wait(300).then(() => {
@@ -52,8 +52,8 @@ describe("global store tests", () => {
         callCount++;
       }, ["effectTest", "effectTest2"]);
 
-      store.get().effectTest = "a";
-      store.get().effectTest2 = "b";
+      store.set("effectTest", "a");
+      store.set("effectTest2", "b");
 
       // We wait for it to take effect
       cy.wait(300).then(() => {
