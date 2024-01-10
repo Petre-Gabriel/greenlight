@@ -64,7 +64,7 @@ With this command, GreenLight will hook on to the element provided and will atta
       const appRoot = document.getElementById("app-root");
 
       GreenLight.init(appRoot);
-      GreenLight.$store.set(myText, "Getting started");
+      GreenLight.$store.set("myText", "Getting started");
     </script>
   </body>
 </html>

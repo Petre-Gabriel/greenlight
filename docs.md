@@ -222,8 +222,8 @@ MyController.effect(() => {
 If multiple variables from the dependencies array change at the same time, the effect will run only once.
 
 ```js
-MyController.$store.set(searchInput, "apples");
-MyController.$store.set(searchFilter, "color=red";
+MyController.$store.set("searchInput", "apples");
+MyController.$store.set("searchFilter", "color=red";
 ```
 
 If you run the code above, the effect will be triggered once. That is because internally, GreenLight uses a strategy called `debounce` to wait for new changes. It waits for a few milliseconds before the final call so if there are multiple changes to the dependency array it will only call it once.
