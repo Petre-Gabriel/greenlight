@@ -34,13 +34,13 @@
             id="username"
             type="text"
             placeholder="Username"
-            gl-bind="username"
+            gl-bind="user.name"
           />
           <input
             id="password"
             type="password"
             placeholder="Password"
-            gl-bind="password"
+            gl-bind="user.password"
           />
         </form>
 
@@ -52,24 +52,33 @@
 
         <div
           id="usernameHook"
-          gl-hook="username,password:onUsernameChange"
+          gl-hook="user.name,user.password:onUsernameChange"
           class="error"
         ></div>
 
         <div
-          gl-if="username"
+          gl-if="user.name"
           id="usernameTemplate"
-          gl-template="{username} is already taken."
+          gl-template="{user.name} is already taken."
         ></div>
 
         <button id="onTest" gl-on="click:testEvent">Test</button>
 
-        <div>Username: <span gl-bind="username"></span></div>
-        <div>Password: <span gl-bind="password"></span></div>
+        <div>Username: <span gl-bind="user.name"></span></div>
+        <div>Password: <span gl-bind="user.password"></span></div>
+
+        aicisa
+        <div gl-bind="user.name"></div>
 
         <ul>
           <template gl-for="(name,idx) in names">
-            <li gl-template="{name} is in the {idx} place"></li>
+            <li class="cy-test" gl-template="{name} is in the {idx} place"></li>
+          </template>
+        </ul>
+
+        <ul>
+          <template gl-for="(obj,idx) in test">
+            <li gl-template="{obj.a} is in the {idx} place"></li>
           </template>
         </ul>
         <div id="ref" gl-ref="contentRef">dsa</div>
@@ -84,17 +93,15 @@
 
       const LoginForm = GreenLight.controller("LoginForm");
 
-      LoginForm.$store.get().names = [1, 2, 3];
+      LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
+
+      LoginForm.$store.set("names", [1, 2, 3]);
+      LoginForm.$store.set("testbind", {
+        a: 1,
+        b: 2,
+      });
 
       const divRef = LoginForm.$refs.get("contentRef");
-
-      GreenLight.$globalStore.effect(() => {
-        console.log("called");
-      }, ["username", "password"]);
-
-      LoginForm.effect(() => {
-        console.log("here");
-      }, ["username"]);
 
       LoginForm.on("onUsernameChange", ([username, password]) => {
         if (!username && !password) return;

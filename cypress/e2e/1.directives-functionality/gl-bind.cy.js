@@ -6,13 +6,13 @@ describe("gl-bind test", () => {
     cy.window().then((win) => {
       // Get the username value in the store
       const Controller = win.GreenLight.controller("LoginForm");
-      const UsernameStoreValue = Controller.$store.get().username;
 
+      const UsernameStoreValue = Controller.$store.get("user.name");
       // Check if it has changed to gabriel.
       expect(UsernameStoreValue).to.eq("gabriel");
 
       // Update and check if the input value changes as well
-      Controller.$store.get().username = "petre";
+      Controller.$store.set("user.name", "petre");
       cy.get("#username").should("have.value", "petre");
     });
   });
@@ -22,7 +22,7 @@ describe("gl-bind test", () => {
 
     cy.get("#username").type("gabriel");
 
-    cy.get("[gl-bind=username]:not(input)").each((bindedEl) => {
+    cy.get("[gl-bind=user\\.name]:not(input)").each((bindedEl) => {
       cy.wrap(bindedEl).should("have.text", "gabriel");
     });
   });
