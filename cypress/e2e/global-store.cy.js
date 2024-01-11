@@ -61,4 +61,22 @@ describe("global store tests", () => {
       });
     });
   });
+
+  it("Should update the value on store change.", () => {
+    cy.visit("http://127.0.0.1:5500/index.html");
+
+    cy.window().then((win) => {
+      win.GreenLight.$globalStore.set("user.name", "test1");
+
+      cy.get("#global-user").should("have.text", "test1");
+      cy.get("#global-template").should("have.text", "test1 is working");
+
+      cy.wait(100).then(() => {
+        win.GreenLight.$globalStore.set("user.name", "test2");
+
+        cy.get("#global-user").should("have.text", "test2");
+        cy.get("#global-template").should("have.text", "test2 is working");
+      });
+    });
+  });
 });

@@ -30,6 +30,9 @@
 
       <div gl-controller="LoginForm">
         <form>
+          <div id="global-user" gl-bind="$user.name"></div>
+          <div id="global-template" gl-template="{$user.name} is working"></div>
+
           <input
             id="username"
             type="text"
@@ -104,6 +107,8 @@
       GreenLight.init(root);
 
       const LoginForm = GreenLight.controller("LoginForm");
+
+      GreenLight.$globalStore.set("user.name", "Global Store");
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
 
