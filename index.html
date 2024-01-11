@@ -44,6 +44,18 @@
           />
         </form>
 
+        <div
+          class="bindpoint"
+          gl-bind="user.name"
+          gl-bindTo="id,text, style"
+        ></div>
+
+        <div
+          class="template_bindpoint"
+          gl-template="{user.name} is cool"
+          gl-bindTo="id,text"
+        ></div>
+
         <!-- With these inputs, we test the controller `effect` method.  -->
         <input gl-bind="effect" placeholder="effect 1" id="effectTest" />
         <input gl-bind="effect2" placeholder="effect 2" id="effectTest2" />
