@@ -29,6 +29,8 @@
       <div>Div 3</div>
 
       <div gl-controller="LoginForm">
+        <div gl-test="plugin"></div>
+
         <form>
           <div id="global-user" gl-bind="$user.name"></div>
           <div id="global-template" gl-template="{$user.name} is working"></div>
@@ -104,11 +106,37 @@
     <script>
       const root = document.querySelector(".root");
 
+      GreenLight.registerPlugin(
+        "test",
+        ({ directive, namings, getScopedPropertyFromElement }) => {
+          GreenLight.pluginIsRegistered = 1;
+
+          directive.register("test", (el, ElementController) => {
+            const testName = directive.getAttribute("test", el);
+            GreenLight.$globalStore.set("cy-plugin-directive", 1);
+
+            function update(key) {
+              if (key !== testName) return;
+
+              const value = getScopedPropertyFromElement(el, testName);
+              console.log("test", value);
+
+              el.innerHTML = value;
+            }
+
+            ElementController.on(namings.GL_STORE_UPDATED_EVENT, update);
+            update(testName);
+          });
+        }
+      );
+
       GreenLight.init(root);
 
       const LoginForm = GreenLight.controller("LoginForm");
 
       GreenLight.$globalStore.set("user.name", "Global Store");
+
+      LoginForm.$store.set("plugin", "Plugin works");
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
 
