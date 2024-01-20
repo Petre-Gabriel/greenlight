@@ -26,4 +26,14 @@ describe("gl-template tests", () => {
       cy.get(".template_bindpoint").should("have.text", "color: red; is cool");
     });
   });
+
+  it("Should bind the global store value", () => {
+    cy.visit("http://127.0.0.1:5500/index.html");
+
+    cy.window().then((win) => {
+      win.GreenLight.$globalStore.set("user.name", "color: red;");
+
+      cy.get("#global-template").should("have.text", "color: red; is working");
+    });
+  });
 });
