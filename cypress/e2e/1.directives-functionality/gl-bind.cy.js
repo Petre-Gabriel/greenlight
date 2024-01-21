@@ -44,6 +44,24 @@ describe("gl-bind test", () => {
     });
   });
 
+  it("Should update the specific bind points with different variables.", () => {
+    cy.visit("http://127.0.0.1:5500/index.html");
+
+    cy.window().then((win) => {
+      const Controller = win.GreenLight.controller("LoginForm");
+
+      Controller.$store.set("test2", {
+        name: "Test",
+        color: "color: red;",
+      });
+
+      cy.get("#bindpointv2").should("have.text", "Test");
+
+      // Not sure why, but it puts the color as RGB, so I will keep it like this.
+      cy.get("#bindpointv2").should("have.css", "color", "rgb(255, 0, 0)");
+    });
+  });
+
   it("Should bind the global store value", () => {
     cy.visit("http://127.0.0.1:5500/index.html");
 
@@ -51,6 +69,18 @@ describe("gl-bind test", () => {
       win.GreenLight.$globalStore.set("user.name", "color: red;");
 
       cy.get("#global-user").should("have.text", "color: red;");
+    });
+  });
+
+  it("Binding point should be treated as default if not provided by user", () => {
+    cy.visit("http://127.0.0.1:5500/index.html");
+
+    cy.window().then((win) => {
+      win.GreenLight.$globalStore.set("user.name", "color: red;");
+
+      cy.get("#bindv2input").type("test");
+
+      cy.get("#bindv2div").should("have.text", "test");
     });
   });
 });

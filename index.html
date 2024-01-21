@@ -31,6 +31,15 @@
       <div gl-controller="LoginForm">
         <div gl-test="plugin"></div>
 
+        <div
+          id="bindpointv2"
+          gl-bind="test2.name@text , test2.color@style"
+        ></div>
+
+        <div id="bindv2div" gl-bind="v2bind@"></div>
+
+        <input id="bindv2input" type="text" gl-bind="v2bind@" />
+
         <form>
           <div id="global-user" gl-bind="$user.name"></div>
           <div id="global-template" gl-template="{$user.name} is working"></div>
@@ -51,8 +60,7 @@
 
         <div
           class="bindpoint"
-          gl-bind="user.name"
-          gl-bindTo="id,text, style"
+          gl-bind="user.name@id, user.name@text, user.name@style"
         ></div>
 
         <div
@@ -119,7 +127,6 @@
               if (key !== testName) return;
 
               const value = getScopedPropertyFromElement(el, testName);
-              console.log("test", value);
 
               el.innerHTML = value;
             }
@@ -137,6 +144,12 @@
       GreenLight.$globalStore.set("user.name", "Global Store");
 
       LoginForm.$store.set("plugin", "Plugin works");
+
+      LoginForm.$store.set("verify", "Working");
+      LoginForm.$store.set("test2", {
+        name: "Gabriel",
+        color: "color: red;",
+      });
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
 
