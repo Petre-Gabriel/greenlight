@@ -56,19 +56,39 @@ Now, every time the username changes, it will update the `p` element.
 
 ## Bind to other properties
 
-It's important to be flexible when working with binding data, so you can pass a helper directive to tell GreenLight where it should bind the data received.
+Unlike `gl-template`, to bind to other properties you need to use a text syntax, like the one below.
 
 ```html
-<p gl-bind="username" gl-bindto="id, text"></p>
+<p gl-bind="username@id"></p>
 ```
 
-The default value for `gl-bindto` is `default` or `text`. They both do the exact same thing, so you don't need to specify the `bindto` if only need the simple behaviour explained above.
+The code above will bind the `username` variable to the ID of the element.
+
+You can pass multiple bind points and bind properties by separating them with a comma:
+
+```html
+<p gl-bind="username@id, welcomeBackMessage@text"></p>
+```
+
+With this, the ID will be equal to the `username` variable and the text content will be equal to the `welcomeBackMessage` variable.
+
+_NOTE_: You don't have to specify the binding point if you only need the default behaviour - if it's an input, bind the value, else bind the text content.
 
 **IMPORTANT**: If you are binding to properties other than the defaults one, you might need some counter measures to prevent XSS and other similar attacks because GreenLight doesn't prevent them.
 
 ## Scope
 
 By default, GreenLight tries to fetch the closest store to your element. It can be a `controller` or an element with directive data set, for example - the `gl-for` directive sets the closest data for each element rendered with it. If the variable set in the `gl-bind` directive is not available in the for loop, it will search for it in the controller store.
+
+To access global variables, you can use the `$` symbol to notify GreenLight that you want to fetch the Global Store.
+
+```js
+GreenLight.$globalStore.set("appName", "Test App");
+```
+
+```html
+<p gl-bind="$appName"></p>
+```
 
 # gl-on
 
@@ -199,9 +219,17 @@ Sometimes, it's ugly to just create new elements to bind a custom message. This 
 
 GreenLight will replace the `{username}` with the actual value from the store. If no variable was found, it will replace it with an empty string. Can be used with `gl-if`.
 
-## Bind the template to other properties.
+## Bind to other properties
 
-You can use the `gl-bindto` with this directive as well. You can find documentation on this helper directive on the `gl-bind` page.
+It's important to be flexible when working with binding data, so you can pass a helper directive to tell GreenLight where it should bind the data received.
+
+```html
+<p gl-template="Hello, {username}" gl-bindto="id, text"></p>
+```
+
+The default value for `gl-bindto` is `default` or `text`. They both do the exact same thing, so you don't need to specify the `bindto` if only need the simple behaviour explained above.
+
+**IMPORTANT**: If you are binding to properties other than the defaults one, you might need some counter measures to prevent XSS and other similar attacks because GreenLight doesn't prevent them.
 
 ## Security
 
@@ -238,8 +266,8 @@ MyController.effect(() => {
 If multiple variables from the dependencies array change at the same time, the effect will run only once.
 
 ```js
-MyController.$store.set("searchInput", "apples");
-MyController.$store.set("searchFilter", "color=red");
+MyController.$store.set(searchInput, "apples");
+MyController.$store.set(searchFilter, "color=red");
 ```
 
 If you run the code above, the effect will be triggered once. That is because internally, GreenLight uses a strategy called `debounce` to wait for new changes. It waits for a few milliseconds before the final call so if there are multiple changes to the dependency array it will only call it once.
