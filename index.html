@@ -33,7 +33,7 @@
 
         <div
           id="bindpointv2"
-          gl-bind="test2.name@text , test2.color@style"
+          gl-bind="test2.name@text , test2.color@style.color"
         ></div>
 
         <div id="bindv2div" gl-bind="v2bind@"></div>
@@ -148,7 +148,7 @@
       LoginForm.$store.set("verify", "Working");
       LoginForm.$store.set("test2", {
         name: "Gabriel",
-        color: "color: red;",
+        color: "red",
       });
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);

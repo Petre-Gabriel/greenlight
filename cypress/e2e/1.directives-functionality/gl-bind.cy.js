@@ -52,7 +52,7 @@ describe("gl-bind test", () => {
 
       Controller.$store.set("test2", {
         name: "Test",
-        color: "color: red;",
+        color: "red",
       });
 
       cy.get("#bindpointv2").should("have.text", "Test");
