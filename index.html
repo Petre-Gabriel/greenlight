@@ -96,6 +96,15 @@
         <div gl-bind="user.name"></div>
 
         <ul>
+          <template gl-for="(obj,idx) in testing.nested[0].more">
+            <li
+              class="nested-objects"
+              gl-template="{obj.a} is nested with id {idx}"
+            ></li>
+          </template>
+        </ul>
+
+        <ul>
           <template gl-for="(name,idx) in names">
             <li class="cy-test" gl-template="{name} is in the {idx} place"></li>
           </template>
@@ -152,6 +161,10 @@
       });
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
+
+      LoginForm.$store.set("testing", {
+        nested: [{ more: [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }] }],
+      });
 
       LoginForm.$store.set("names", [1, 2, 3]);
       LoginForm.$store.set("testbind", {
