@@ -26,6 +26,7 @@ GreenLight.registerPlugin(pluginName, (PluginObject) => {
 
 `name: String` The name of the plugin specified.
 `getScopedPropertyFromElement(element: HTMLElement, property: String)` Get object from directive attribute, local store and global store based on the scope.
+`evaluateExpressionForElement(element: HTMLElement, expression: String)` Evaluate expression provided in the params
 `generateControllerEventName(controllerName: String, eventName: String)` Generates controller event name with the GreenLight format. If you are using the Controller `callEvent` it is called automatically, you only need to provide the eventName.
 `removeGLElement(el: HTMLElement, controllerName: String)` Remove and do cleanup on
 `directive` Object with all the necessary methods to work with directives.

@@ -93,6 +93,7 @@
         <div>Password: <span gl-bind="user.password"></span></div>
 
         aicisa
+        <div gl-performance="ss"></div>
         <div gl-bind="user.name"></div>
 
         <ul>
@@ -161,7 +162,6 @@
       });
 
       LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
-
       LoginForm.$store.set("testing", {
         nested: [{ more: [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }] }],
       });
