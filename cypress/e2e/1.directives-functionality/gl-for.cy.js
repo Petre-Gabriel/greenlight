@@ -1,4 +1,15 @@
 describe("gl-for tests", () => {
+  it("Should accept nested objects to iterate over", () => {
+    cy.visit("http://127.0.0.1:5500/index.html");
+
+    cy.window().then((win) => {
+      const Controller = win.GreenLight.controller("LoginForm");
+
+      // It starts with a length of 3
+      cy.get("li.nested-objects").should("have.length", 4);
+    });
+  });
+
   it("Should react to changes", () => {
     cy.visit("http://127.0.0.1:5500/index.html");
 
