@@ -41,8 +41,11 @@
         <input id="bindv2input" type="text" gl-bind="v2bind@" />
 
         <form>
-          <div id="global-user" gl-bind="$user.name"></div>
-          <div id="global-template" gl-template="{$user.name} is working"></div>
+          <div id="global-user" gl-bind="$g.user.name"></div>
+          <div
+            id="global-template"
+            gl-template="{$g.user.name} is working"
+          ></div>
 
           <input
             id="username"
@@ -82,8 +85,9 @@
         ></div>
 
         <div
-          gl-if="user.name"
+          gl-if="user.name.length >= 5"
           id="usernameTemplate"
+          class="gl-if-test"
           gl-template="{user.name} is already taken."
         ></div>
 
@@ -93,7 +97,6 @@
         <div>Password: <span gl-bind="user.password"></span></div>
 
         aicisa
-        <div gl-performance="ss"></div>
         <div gl-bind="user.name"></div>
 
         <ul>
@@ -113,10 +116,12 @@
 
         <ul>
           <template gl-for="(obj,idx) in test">
-            <li gl-template="{obj.a} is in the {idx} place"></li>
+            <li gl-template="{obj.a} is obj.a in {idx} place"></li>
           </template>
         </ul>
         <div id="ref" gl-ref="contentRef">dsa</div>
+
+        <div gl-performance="ss"></div>
       </div>
     </div>
 
@@ -126,7 +131,12 @@
 
       GreenLight.registerPlugin(
         "test",
-        ({ directive, namings, getScopedPropertyFromElement }) => {
+        ({
+          directive,
+          namings,
+          getScopedPropertyFromElement,
+          evaluateExpressionForElement,
+        }) => {
           GreenLight.pluginIsRegistered = 1;
 
           directive.register("test", (el, ElementController) => {
@@ -143,6 +153,20 @@
 
             ElementController.on(namings.GL_STORE_UPDATED_EVENT, update);
             update(testName);
+          });
+
+          directive.register("performance", async (el, ElementController) => {
+            let count = 0;
+
+            const startTime = performance.now();
+
+            while (performance.now() - startTime <= 1000) {
+              await evaluateExpressionForElement(el, "test");
+
+              count++;
+            }
+
+            console.log("Count", count);
           });
         }
       );
