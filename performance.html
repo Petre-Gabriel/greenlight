@@ -4032,10 +4032,9 @@
     <script>
       const root = document.querySelector(".root");
 
-      const start = performance.now();
+      console.time("performance impact");
       GreenLight.init(root);
-      const finish = performance.now();
-      console.log(finish - start);
+      console.timeEnd("performance impact");
     </script>
   </body>
 </html>

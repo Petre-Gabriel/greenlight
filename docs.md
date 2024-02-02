@@ -87,7 +87,7 @@ GreenLight.$globalStore.set("appName", "Test App");
 ```
 
 ```html
-<p gl-bind="$appName"></p>
+<p gl-bind="$g.appName"></p>
 ```
 
 # gl-on
