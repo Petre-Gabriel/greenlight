@@ -33,12 +33,13 @@
 
         <div
           id="bindpointv2"
-          gl-bind="test2.name@text , test2.color@style.color"
+          gl-bind:text="test2.name"
+          gl-bind:style.color="test2.color"
         ></div>
 
-        <div id="bindv2div" gl-bind="v2bind@"></div>
+        <div id="bindv2div" gl-bind="v2bind"></div>
 
-        <input id="bindv2input" type="text" gl-bind="v2bind@" />
+        <input id="bindv2input" type="text" gl-bind="v2bind" />
 
         <form>
           <div id="global-user" gl-bind="$g.user.name"></div>
@@ -63,13 +64,15 @@
 
         <div
           class="bindpoint"
-          gl-bind="user.name@id, user.name@text, user.name@style"
+          gl-bind:id="user.name"
+          gl-bind:text="user.name"
+          gl-bind:style="user.name"
         ></div>
 
         <div
           class="template_bindpoint"
-          gl-template="{user.name} is cool"
-          gl-bindTo="id,text"
+          gl-template:id="{user.name} is cool"
+          gl-template:text="{user.name} is cool"
         ></div>
 
         <!-- With these inputs, we test the controller `effect` method.  -->
