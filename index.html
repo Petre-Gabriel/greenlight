@@ -178,42 +178,44 @@
 
       const LoginForm = GreenLight.controller("LoginForm");
 
-      GreenLight.$globalStore.set("user.name", "Global Store");
+      if (LoginForm) {
+        GreenLight.$globalStore.set("user.name", "Global Store");
 
-      LoginForm.$store.set("plugin", "Plugin works");
+        LoginForm.$store.set("plugin", "Plugin works");
 
-      LoginForm.$store.set("verify", "Working");
-      LoginForm.$store.set("test2", {
-        name: "Gabriel",
-        color: "red",
-      });
+        LoginForm.$store.set("verify", "Working");
+        LoginForm.$store.set("test2", {
+          name: "Gabriel",
+          color: "red",
+        });
 
-      LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
-      LoginForm.$store.set("testing", {
-        nested: [{ more: [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }] }],
-      });
+        LoginForm.$store.set("test", [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]);
+        LoginForm.$store.set("testing", {
+          nested: [{ more: [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }] }],
+        });
 
-      LoginForm.$store.set("names", [1, 2, 3]);
-      LoginForm.$store.set("testbind", {
-        a: 1,
-        b: 2,
-      });
+        LoginForm.$store.set("names", [1, 2, 3]);
+        LoginForm.$store.set("testbind", {
+          a: 1,
+          b: 2,
+        });
 
-      const divRef = LoginForm.$refs.get("contentRef");
+        const divRef = LoginForm.$refs.get("contentRef");
 
-      LoginForm.on("onUsernameChange", ([username, password]) => {
-        if (!username && !password) return;
+        LoginForm.on("onUsernameChange", ([username, password]) => {
+          if (!username && !password) return;
 
-        if (username?.length < 5)
-          return "The username should have at least 5 characters";
+          if (username?.length < 5)
+            return "The username should have at least 5 characters";
 
-        if (username === "Gabriel03") return "Username is taken.";
+          if (username === "Gabriel03") return "Username is taken.";
 
-        if (password?.length < 8)
-          return "Your password should have at least 8 characters";
+          if (password?.length < 8)
+            return "Your password should have at least 8 characters";
 
-        return;
-      });
+          return;
+        });
+      }
     </script>
   </body>
 </html>
