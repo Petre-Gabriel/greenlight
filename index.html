@@ -28,7 +28,7 @@
       <div>Div 2</div>
       <div>Div 3</div>
 
-      <div gl-controller="LoginForm">
+      <div gl-controller="LoginForm" id="controllerDiv">
         <div gl-test="plugin"></div>
 
         <div
@@ -142,21 +142,24 @@
         }) => {
           GreenLight.pluginIsRegistered = 1;
 
-          directive.register("test", (el, ElementController) => {
-            const testName = directive.getAttribute("test", el);
-            GreenLight.$globalStore.set("cy-plugin-directive", 1);
+          directive.register(
+            "test",
+            (el, ElementController, { getDirectiveAttr }) => {
+              const testName = getDirectiveAttr();
+              GreenLight.$globalStore.set("cy-plugin-directive", 1);
 
-            function update(key) {
-              if (key !== testName) return;
+              function update(key) {
+                if (key !== testName) return;
 
-              const value = getScopedPropertyFromElement(el, testName);
+                const value = getScopedPropertyFromElement(el, testName);
 
-              el.innerHTML = value;
+                el.innerHTML = value;
+              }
+
+              ElementController.on(namings.GL_STORE_UPDATED_EVENT, update);
+              update(testName);
             }
-
-            ElementController.on(namings.GL_STORE_UPDATED_EVENT, update);
-            update(testName);
-          });
+          );
 
           directive.register("performance", async (el, ElementController) => {
             let count = 0;

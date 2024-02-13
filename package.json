@@ -21,7 +21,7 @@
     "build": "parcel build",
     "dev:test": "node testing.server.js",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome",
+    "cypress:run": "cypress run",
     "cypress:verify": "cypress verify"
   },
   "dependencies": {
