@@ -56,18 +56,18 @@ Now, every time the username changes, it will update the `p` element.
 
 ## Bind to other properties
 
-Unlike `gl-template`, to bind to other properties you need to use a text syntax, like the one below.
+You are not restricted to only binding to the text content or value of an element. You can bind to anything you like:
 
 ```html
-<p gl-bind="username@id"></p>
+<p gl-bind:id="username"></p>
 ```
 
 The code above will bind the `username` variable to the ID of the element.
 
-You can pass multiple bind points and bind properties by separating them with a comma:
+You can pass as many bind points as you like, you just need to specify them on the element:
 
 ```html
-<p gl-bind="username@id, welcomeBackMessage@text"></p>
+<p gl-bind:id="username" gl-bind:text="welcomeBackMessage"></p>
 ```
 
 With this, the ID will be equal to the `username` variable and the text content will be equal to the `welcomeBackMessage` variable.
@@ -87,7 +87,7 @@ GreenLight.$globalStore.set("appName", "Test App");
 ```
 
 ```html
-<p gl-bind="$g.appName"></p>
+<p gl-bind="$appName"></p>
 ```
 
 # gl-on
@@ -221,13 +221,13 @@ GreenLight will replace the `{username}` with the actual value from the store. I
 
 ## Bind to other properties
 
-It's important to be flexible when working with binding data, so you can pass a helper directive to tell GreenLight where it should bind the data received.
+It's important to be flexible when working with binding data, so you can pass additional parameters to tell GreenLight where it should bind the data received.
 
 ```html
-<p gl-template="Hello, {username}" gl-bindto="id, text"></p>
+<p gl-template:id="{username}" gl-template="Hello, {username}"></p>
 ```
 
-The default value for `gl-bindto` is `default` or `text`. They both do the exact same thing, so you don't need to specify the `bindto` if only need the simple behaviour explained above.
+The default value if you don't provide the addition is `default` or `text`. They both do the exact same thing, so you don't need to specify the binding point if you only need the simple behaviour explained above.
 
 **IMPORTANT**: If you are binding to properties other than the defaults one, you might need some counter measures to prevent XSS and other similar attacks because GreenLight doesn't prevent them.
 
