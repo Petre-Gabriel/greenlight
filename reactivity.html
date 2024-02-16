@@ -1,0 +1,61 @@
+<!-- NOTE: EDIT WITH CAUTION, AS THIS FILE IS USED IN THE CYPRESS TESTS. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+
+    <style>
+      .error {
+        padding: 8px 12px;
+        border: 1px solid red;
+        border-radius: 3px;
+
+        background-color: rgba(255, 0, 0, 0.04);
+        color: red;
+        font-weight: 500;
+
+        max-width: 65ch;
+
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div gl-controller="ReactivityController">
+        <div gl-bind="react.name.full"></div>
+        <div gl-bind="react.name.first"></div>
+        <div gl-bind="react.name.last"></div>
+      </div>
+    </div>
+
+    <script src="./dist/main.js"></script>
+    <script>
+      const root = document.querySelector(".root");
+
+      GreenLight.init(root);
+
+      const Controller = GreenLight.controller("ReactivityController");
+
+      Controller.$store.set("react", {
+        name: {
+          full: "John Doe",
+          first: "John",
+          last: "Doe",
+        },
+      });
+
+      Controller.$store.set("react.name", {
+        full: "John Smith",
+        first: "John",
+        last: "Smith",
+      });
+      Controller.$store.set("react.name.full", "John Smith");
+      Controller.$store.set("react.name.first", "John");
+      Controller.$store.set("react.name.last", "Smith");
+      Controller.$store.set("react.name.nest.more", "Smith");
+    </script>
+  </body>
+</html>
