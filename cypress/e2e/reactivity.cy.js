@@ -1,5 +1,5 @@
 // Import the exported function from the reactivity.js file in the /lib folder
-const createReactivityFunction = require("../../lib/reactivity");
+const { createReactivityFunction } = require("../../lib/reactivity");
 
 describe("reactivity engine test", () => {
   it("should return true for the same variable and false is is not the exact same", () => {
