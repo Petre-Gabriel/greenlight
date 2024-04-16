@@ -1,6 +1,6 @@
 {
   "name": "@gabrielp03/greenlight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "lib/main.js",
   "global": "dist/main.js",
   "homepage": "https://gl.petregabriel.ro",
