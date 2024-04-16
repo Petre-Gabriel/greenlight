@@ -1,8 +1,14 @@
 {
-  "name": "greenlight",
+  "name": "@gabrielp03/greenlight",
   "version": "0.0.1",
   "source": "lib/main.js",
   "global": "dist/main.js",
+  "main": "dist/main.js",
+  "homepage": "https://gl.petregabriel.ro",
+  "repository": "github:Petre-Gabriel/greenlight",
+  "files": [
+    "dist"
+  ],
   "targets": {
     "global": {
       "context": "browser",
